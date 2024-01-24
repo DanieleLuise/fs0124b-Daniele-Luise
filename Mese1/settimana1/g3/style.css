@@ -1,6 +1,7 @@
 .logo{
     text-align: center;
     margin: 0%;
+    
 }
 .h1{
     text-align: center;
@@ -15,5 +16,25 @@
     margin: 0%;
 }
 .sotto-foto{
-    
+    text-align: center;
+    margin: 0%;
 }
+.primo-h3{
+    text-align: center;
+    margin: 0%;
+}
+ .div-elenco{
+    text-align: center;
+    margin: 0%;
+ }
+ .div-finale{
+    text-align: center;
+    margin: 0%;
+ }
+ #ultima-p{
+    text-align: center;
+    margin: 0%;
+ }
+ #feature{
+    color: red;
+ }
