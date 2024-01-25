@@ -1,5 +1,13 @@
 /* IMPOSTAZIONI GENERALI */
-
+#sfondo{
+    background-image: url(./sfondo.png);
+    box-sizing: border-box;
+    background-position: top;
+    
+}
+body{
+    margin: 10px;
+}
 /* HEADER */
 
 /* MAIN */
