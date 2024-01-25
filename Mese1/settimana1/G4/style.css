@@ -1,14 +1,16 @@
 /* IMPOSTAZIONI GENERALI */
-#sfondo{
+ body{
+    font-family: 'Poppins', sans-serif;
     background-image: url(./sfondo.png);
-    box-sizing: border-box;
-    background-position: top;
-    
-}
-body{
-    margin: 10px;
-}
+    margin: 15px;
+ }
 /* HEADER */
+#primo-id{
+    background: rgb(0, 160, 198);
+    background: linear-gradient(180deg, rgba(0, 160, 198,1) 0%, rgba(3,109,134,1)68%);
+    padding: 30px 0;
+    margin-bottom: 15px;
+}   
 
 /* MAIN */
 
