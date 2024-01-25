@@ -1,21 +1,99 @@
 /* IMPOSTAZIONI GENERALI */
 body{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     font-family: 'Poppins', sans-serif;
+    background-position: center;
     background-image: url(../img/sfondo.png);
     margin:15px;
 }
 /* HEADER */
 #parte-iniziale{
+    font-family: 'Poppins',sans-serif;
     text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600px;
+    font-size: 1,2rem;
+    padding: 20px;
+    box-shadow: rgb(68, 68, 68) 0px 3px 3px 0px;
+    background-image: linear-gradient(rgb(0, 160, 198) 0%, rgb(3, 109, 134) 68%);
+}
+#first-logo{
+    padding-bottom: 3px;
+}
 
+#prima-p{
+    font-size: medium;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 1px;
 }
 
 /* MAIN */
+#parte-main{
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: rgb(17, 17, 17) 0px 3px 3px 0px;;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right:15px;
+    font-size: 1,2rem;;
+
+    
+}
 
 /* ELEMENTI NEL MAIN - ARTICLE */
-
+#h1{
+    font-weight: 500;
+    font-size: 150%;
+    line-height: 50px;
+    padding-bottom: 20px;
+}
+#autore-data{
+    font-size: 110%;
+    color: grey;
+    padding-bottom: 20px;
+}
+#primo-blocco{
+    font-size: 110%;
+    padding-bottom: 20px
+    
+}
+#parti-comunired{
+    color: red;
+}
+#secondo-blocco{
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+}
+#primo-ul ul{
+    list-style-type: disc;
+    margin-left: 20px;
+}
+#div-elenco li{
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+#pre-table{
+    font-size: 0,8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#caption{
+    font-size: 0.8rem;
+    padding-top: 0,7rem;
+    padding-bottom: 0.2rem;
+}
 /* TABELLE */
-
+#thead{
+    color: white;
+    background-color: rgb(75, 132, 224);
+   
+}
 /* FORM */
 
 /* ELEMENTI NELL' ASIDE */
