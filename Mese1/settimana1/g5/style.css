@@ -30,14 +30,14 @@ body{
     background-size: 600px;
     text-align: center;
     width: 130%;
-   
-
-   
 }
 #bottone{
     color: white;
     background-color: #e22d0e;
     font-family: "Montserrat", sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+   
 }
 .section{
     width: 110%;
@@ -89,7 +89,7 @@ body{
 }
 .section-schede{
     text-align: center;
-    padding-left: 85px;
+    padding-left: 75px;
     background-color: white;
     
 }
@@ -106,4 +106,30 @@ body{
 }
 .p-schede{
     padding-left: 20%;
+}
+#footer{
+    background-color: #118ccef1;
+    text-align: center;
+    
+}
+#h3-footer{
+text-align: center;
+color: white;
+font-family: "Montserrat", sans-serif;
+font-size:1,5rem;
+padding-top: 7%;
+padding-bottom: 1%;
+}
+
+
+#a-p{
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-bottom: 10%;
+}
+#p-finale{
+    color: white;
+    font-size: 0.8rem;
+    padding-bottom: 20px;
 }
