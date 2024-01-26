@@ -6,7 +6,7 @@ body{
     line-height: 1.65;
 }
 #logo{
-    width: 120%;
+    width: 130%;
     background-position: center;
     text-align: center;
     background-color: black;
@@ -29,7 +29,7 @@ body{
     background-repeat: no-repeat;
     background-size: 600px;
     text-align: center;
-    width: 130%;
+    width: 120%;
 }
 #bottone{
     color: white;
@@ -132,4 +132,7 @@ padding-bottom: 1%;
     color: white;
     font-size: 0.8rem;
     padding-bottom: 20px;
+}
+#p-finale a{
+    color: white;
 }
