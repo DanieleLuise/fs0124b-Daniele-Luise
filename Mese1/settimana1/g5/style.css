@@ -46,11 +46,37 @@ body{
     font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
     padding-top: 10%;
+    
 }
 .text-position{
     padding-top: 10px;
     padding-bottom: 20x;
 }
-#sezione-rossa{
-    background-color: red;
+.section img{
+    border-radius: 50%;
 }
+#testo-rosso{
+    background-color: #b8250b;
+}
+#h3-n1{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.7rem;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+#p-red{
+    color: white;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+}
+.mario-ceo{
+    color: white;
+    font-size: 1rem;
+}
+.mario-ceo div{
+    font-size: 0.8rem;
+    padding-bottom: 15px;
+}
+
+
