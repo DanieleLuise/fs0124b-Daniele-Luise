@@ -6,7 +6,7 @@ body{
     line-height: 1.65;
 }
 #logo{
-    width: 110%;
+    width: 120%;
     background-position: center;
     text-align: center;
     background-color: black;
@@ -21,6 +21,7 @@ body{
     line-height: 1em;
     padding-bottom: 10px;
     padding-top: 30px;
+
 }
 #article{
     background-image: url(./banner.jpg) ;
@@ -28,7 +29,9 @@ body{
     background-repeat: no-repeat;
     background-size: 600px;
     text-align: center;
-    width: 120%;
+    width: 130%;
+   
+
    
 }
 #bottone{
@@ -46,18 +49,24 @@ body{
     font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
     padding-top: 10%;
+    padding-left: 50px;
     
 }
+
 .text-position{
     padding-top: 10px;
     padding-bottom: 20x;
+    padding-left: 40px;
 }
 .section img{
     border-radius: 50%;
+    padding-left: 40px;
 }
 #testo-rosso{
     background-color: #b8250b;
+   padding-left: 20px;
 }
+
 #h3-n1{
     color: white;
     font-family: "Montserrat", sans-serif;
@@ -78,5 +87,23 @@ body{
     font-size: 0.8rem;
     padding-bottom: 15px;
 }
-
-
+.section-schede{
+    text-align: center;
+    padding-left: 85px;
+    background-color: white;
+    
+}
+.section-schede img{
+    padding-left: 30px;
+    text-align: center;
+    margin: 10px;
+}
+.azzurro-schede{
+    color: #25a2c3;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    padding-left: 70px;
+}
+.p-schede{
+    padding-left: 20%;
+}
