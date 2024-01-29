@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../S1-L5/Esercizio/css"
+		},
+		{
+			"path": "../../../../S1-L5/Esercizio/images"
+		},
+		{
+			"path": "../../../../S1-L5/Mockups"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "g5"
+	}
+}
