@@ -163,4 +163,5 @@ console.log(arrayVuoto);
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-
+arrayVuoto[9] = 100
+console.log(arrayVuoto[9])
