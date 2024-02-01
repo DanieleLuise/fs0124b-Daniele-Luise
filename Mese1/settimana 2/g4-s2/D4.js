@@ -110,7 +110,7 @@ console.log(check3and7(21));
 */
 
 let cutString = function (stringa){
-    return stringa.slice(- 0, stringa.lenght - 6)
+    return stringa.slice(1,-1)
 }
 console.log(cutString('EPICODE'));
 
