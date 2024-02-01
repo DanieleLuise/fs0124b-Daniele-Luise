@@ -132,8 +132,9 @@ let femaleCharacters = []
 
 for( let i = 0; i < starWarsCharacters.length; i++){
 
-  if(starWarsCharacters[i].gender == 'female')
-  femaleCharacters.push(starWarsCharacters[i].gender)
+  if(starWarsCharacters[i].gender == 'female'){
+  femaleCharacters.push(starWarsCharacters[i])
+}
 }
 
 console.log(femaleCharacters);
@@ -148,7 +149,7 @@ console.log(femaleCharacters);
   yellow: [],
   brown: [],
   red: [],
-  blue_gray: [],
+  "blue-gray": [],
 };
 
 /* ESERCIZIO 5
@@ -156,7 +157,7 @@ console.log(femaleCharacters);
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for(let i = 0; i < starWarsCharacters.lenght; i++){
+for (let i = 0; i < starWarsCharacters.lenght; i++){
   switch (starWarsCharacters[i].eye_color){
     case 'blue':
       eyeColor.blue.push(starWarsCharacters[i]);
@@ -171,12 +172,12 @@ for(let i = 0; i < starWarsCharacters.lenght; i++){
           eyeColor.red.push(starWarsCharacters[i]);
           break;
       case 'blue_gray':
-            eyeColor.blue-gray.push(starWarsCharacters[i]);
+            eyeColor["blue-gray"].push(starWarsCharacters[i]);
             break;
   }
 
 }
-console.log(eyeColor)
+console.log(eyeColor);
 
 
 
@@ -187,7 +188,7 @@ console.log(eyeColor)
 let crewMass = 0;
 let i = 0;
 
-while(i < starWarsCharacters.leght){
+while(i < starWarsCharacters.lenght){
   crewMass += starWarsCharacters[i].mass;
   i++;
 }
