@@ -80,7 +80,25 @@ article a{
 
 
 .p-immagini{
-    padding: 10px;
-    margin: 10px;
+    padding: 1px;
+
+    margin: 2px;
+    text-align: center;
+}
+
+footer p{
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 0%;
+    background-color: rgba(54,71,89,255);
+    color:white,
+
+}
+footer img{
+    background-color: rgba(34,47,63,255);
+    padding: 0%;
+    margin: 0%;
     text-align: center;
 }
