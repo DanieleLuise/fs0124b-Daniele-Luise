@@ -4,16 +4,16 @@ header{
     margin: 0%;
     padding: 0%;
     border-bottom: 10px;
-
+    padding-left: 2%;
 }
 nav{
     margin: 0%;
     padding: 0%;
     background-color: rgba(54,71,89,255);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
-
+    padding-left: 2%;
 }
 .ancore-logo{
     color: white;
@@ -60,3 +60,22 @@ main{
 article a{
    display: inline;
 }
+
+
+.div-immagine{
+    width: calc(100% / 5);
+    margin-bottom: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+.div-immagine img{
+    border-radius: 10%;
+    max-width: 100%;
+    width: fit-content;
+    height: 330px;
+
+}
+
+
