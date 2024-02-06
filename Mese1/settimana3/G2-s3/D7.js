@@ -245,20 +245,28 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-  function trovaFilm(filmArray)
+  function trovaFilm(filmArray){
   let trovaFilmVecchio = filmArray[0];
   filmArray.forEach(film =>{
     if(Number(film.Year) < Number(trovaFilmVecchio.year)){
 
     }
+    
   })
-    return trovaFilmVecchio
+  return trovaFilmVecchio
+}
+    
 
     console.log(trovaFilm(movies))
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+function NumeroFilm(numero) {
+  return movies.length
+}
+
+console.log(NumeroFilm())
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
