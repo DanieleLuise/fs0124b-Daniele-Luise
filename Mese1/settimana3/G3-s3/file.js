@@ -1,15 +1,26 @@
 
+const botton = document.querySelector('#bottone')
+const lista = document.querySelector('#lista')
+const input = document.querySelector('#testo')
 
-function ciao (){
-    let v1 = document.createElement('li')
-    let input1 = document.getElementById('input').value
-    let valore = document.createTextNode (input1)
-    v1.appendChild(valore)
-    if(input1 == ''){
-        return null
-    }else{
-        return document.getElementById('ul').appendChild(v1);
+botton.addEventListener('click',function(){
 
-    }
-}
-    
+let li = document.createElement('li')
+li.innerText = input.value
+li.classList.add('task')
+
+li.addEventListener('click',function(){
+    li.classList.toggle('completato')
+})
+
+let button = document.createElement('button')
+button.innerText = 'Elimina'
+
+button.addEventListener('click',function(){
+    li.remove()
+})
+
+li.append(button)
+lista.append(li)
+
+})
