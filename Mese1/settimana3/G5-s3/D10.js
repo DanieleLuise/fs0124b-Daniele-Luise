@@ -182,7 +182,12 @@ console.log(giornoOggi);
   }
 */
 
-
+function rollTheDices(numero){
+let result = {
+  sum: 0,
+  values: [],
+};
+}
 
 
 /* ESERCIZIO 9
