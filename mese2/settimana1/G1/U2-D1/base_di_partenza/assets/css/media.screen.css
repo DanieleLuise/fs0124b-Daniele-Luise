@@ -39,6 +39,9 @@ footer{
 }
 
 @media screen and (min-width:1200px){
+    article h1{
+        font-size: 50px;
+    }
     body{
       padding-left: 100px;
       padding-right: 100px;
