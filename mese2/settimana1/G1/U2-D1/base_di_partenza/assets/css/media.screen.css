@@ -1,0 +1,121 @@
+@media screen and (min-width:576px) {
+.ul-header li{
+    display: inline-block;
+    
+}
+article h1{
+    font-size: 50px;
+    
+
+}
+
+@media screen and (min-width:768px){
+    article h1{
+        font-size: 60px;
+    }
+    table{
+      
+        margin: 5em auto;
+        width: 60%;
+    }
+
+}
+section p{
+    font-size: 20px;
+}
+section input{
+    width: 70%;
+    padding: 15px;
+
+}
+
+section button{
+    padding: 15px;
+    width: 15%;
+}
+footer{
+    font-size: 20px;
+}
+}
+
+@media screen and (min-width:1200px){
+    body{
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+   header{
+    height: 90px;
+    padding: 20px;
+    text-align: center;
+   }
+ .contenuto{
+    display: flex;
+    justify-content: space-between;
+    
+ }
+    header p{
+        padding-top: 15px;
+        text-align: left;
+        
+    }
+    header ul li{
+        padding-top: 15px;
+    }
+    .left{
+        display: flex;
+       
+        
+    }
+    .left img{
+        margin-right: 10px;
+
+
+    }
+    nav ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    table{
+        width: 600px;
+    }
+    .blocchi{
+        display: inline-block;
+        width: calc(100% / 2 - 2px);
+        vertical-align: top;
+        
+    }
+    iframe{
+        height: 207px;
+    }
+    section{
+        border-radius: 20px;
+    }
+
+    .articoli{
+        display: inline-block;
+        width: calc(100% / 3 - 3px);
+    }
+    section button{
+        width: 100px;
+    }
+}
+
+@media print {
+    header{
+        display: none;
+    }
+    .display-none{
+
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+
+}
