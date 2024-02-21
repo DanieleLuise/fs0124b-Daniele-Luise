@@ -1,4 +1,25 @@
 @media screen and (min-width: 576px){
-   
+   .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+.container-nav{
+    margin-bottom: 20px;
+}
+   .h3-resp{
+    margin-left: 20px;
+    font-size: 60px;
+    color: rgba(130,54,24,255);
+    font-weight: bold;
+   }
+   .parte-centrale h3{
+    font-weight: bold;
+   }
+   .miele-img img{
+    width: 515px;
+    height: 350px;
+    padding: 10px;
+   }
 }
     

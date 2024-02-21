@@ -1,26 +1,27 @@
 .container{
     background-color: rgba(254,247,226,255);
     width: fit-content;
-    border-radius: 80px;
+    border-radius: 30px;
     color: rgba(116,35,5,255);
     margin: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 .container img{
-    width: 300px;
-    height: 220px;
-    border-top-right-radius: 80px;
-    border-top-left-radius: 80px;
+    width: 240px;
+    height: 150px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
     margin-bottom: 15px;
+    margin-left: 5px;
 }
 
 .descrizione h3{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 .descrizione p{
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 12px;
     margin-left: 10px;
 }
 .container-descr{
