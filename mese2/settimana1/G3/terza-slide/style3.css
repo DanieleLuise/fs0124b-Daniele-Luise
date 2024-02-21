@@ -1,0 +1,50 @@
+.container-tre{
+    background-color: rgba(254,247,226,255);
+    margin: 10px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.parte-centrale h3{
+    color: rgba(130,54,24,255);
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.testo{
+    color: rgba(130,54,24,255);
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    
+}
+.miele-img img{
+    width: 250px;
+    height: 180px;
+}
+
+@media screen and (min-width: 1200px){
+    .container-tre{
+        flex-direction: row-reverse;
+        
+    }
+
+    .miele-img img{
+        width: 550px;
+        height: 300px;
+        margin-right: 20px;
+    }
+    .parte-centrale h3{
+        margin-top: 0px;
+        
+    }
+
+    .testo{
+        line-height: 20px;
+    }
+}
