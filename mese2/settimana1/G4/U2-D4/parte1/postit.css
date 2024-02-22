@@ -1,0 +1,69 @@
+.container{
+    background-color: gray;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    perspective: 400px;
+    transform-style: preserve-3d;
+   padding: 20px;
+    
+}
+
+.poster-gialli{
+   display: flex;
+ align-items: center;
+    justify-content: center;
+   margin:  5px;
+   width: 130px;
+   height: 130px;
+   background: linear-gradient(180deg, rgba(250,251,201,1) 
+   7%, rgba(189,189,163,1) 59%);
+    transform: rotate(-4deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+} 
+.poster-gialli:hover {
+    transform: scale(1.30);
+    z-index: 1;
+}
+
+
+.poster-verdi{
+    display: flex;
+    align-items: center;
+       justify-content: center;
+    margin:  5px;
+   width: 130px;
+   height: 130px;
+   background: linear-gradient(180deg, rgba(200,248,202,1) 
+   7%, rgba(158,181,161,1) 65%);
+   transform: rotate(4deg);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   position: relative;
+
+}
+.poster-verdi:hover {
+    transform: scale(1.30);
+    z-index: 1;
+}
+
+.poster-viola{
+    display: flex;
+    align-items: center;
+       justify-content: center;
+    margin:  5px;
+   width: 130px;
+   height: 130px;
+   background: linear-gradient(180deg, rgba(201,201,247,1) 
+   7%, rgba(139,140,155,1) 65%);
+   transform: rotate(-4deg);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   position: relative;
+
+}
+
+.poster-viola:hover {
+    transform: scale(1.30);
+    z-index: 1;
+}
