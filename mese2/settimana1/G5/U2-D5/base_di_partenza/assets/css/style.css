@@ -2,7 +2,10 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-
+header{
+    position: sticky;
+    top: 0;
+}
 .nav-bar{
     background-color: #ffc017;
     padding-top: 20px;
@@ -56,4 +59,152 @@ body{
     padding-right: 40px;
     border-radius: 40px;
     
+}
+.trending{
+    display: flex;
+    align-items: center;
+}
+
+.primo-blocco{
+    display: flex;
+    justify-content: flex-start;
+    
+    width: 30%;
+    
+    gap: 20px;
+    
+}
+.articolo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+.articolo h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+.allinea{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    
+}
+
+#p-gray{
+    color: gray;
+    font-size: 13px;
+}
+.allinea img{
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+}
+.numero{
+    color: rgba(230,231,231,255);
+}
+.numero p{
+    font-size: 30px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    height: 350px;
+    border-bottom: solid grey;
+
+    
+}
+.trending{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 10px;
+}
+.container-due{
+    margin-top: 40px;
+}
+.p-sfondo{
+    display: flex;
+    align-items: center;
+    
+    gap: 10px;
+    
+}
+.p-grigia{
+    background-color: rgba(242,243,243,255);
+    padding: 10px 10px;
+    border-radius: 70px;
+    font-size: 12px;
+    color: gray;
+    
+}
+.container-due{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 25px;
+
+}
+.img-scroll img{
+    width: 230px;
+    height: 150px;
+}
+.p-scroll{
+    width: 400px;
+    color: gray;
+    font-size: 12px;
+
+}
+.container-sotto{
+    display: flex;
+}
+.container-tre{
+    margin: 30px;
+    position: sticky;
+    top:  0px;
+    
+
+    
+}
+.discover{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+    
+
+}
+.blocco-discover{
+    display: flex;
+    flex-wrap: wrap;
+    
+     gap: 10px;
+     border-bottom: solid gray;
+     padding-bottom: 20px;
+}
+.a-discover{
+
+   border-radius: 40px;
+   background-color: #f2f2f2;
+   padding: 10px;
+   
+
+}
+
+.foot{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+
+}
+.container-sotto{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
 }
