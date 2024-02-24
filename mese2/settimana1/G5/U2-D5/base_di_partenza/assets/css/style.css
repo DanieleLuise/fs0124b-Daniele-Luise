@@ -5,6 +5,7 @@ body{
 header{
     position: sticky;
     top: 0;
+    z-index: 10;
     
 }
 .nav-bar{
@@ -15,6 +16,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    
 
 }
 .a-nav a{
@@ -40,10 +42,11 @@ header{
     background-color: #ffc017;
     padding-left: 140px;
    
-    
-    
-}
 
+}
+.main-section a{
+    cursor: pointer;
+}
 .main-section h1{
     font-size: 80px;
     padding-bottom: 25px;
@@ -141,6 +144,8 @@ header{
     border-radius: 70px;
     font-size: 12px;
     color: gray;
+    cursor: pointer;
+    
     
 }
 .container-due{
@@ -185,7 +190,7 @@ header{
 .blocco-discover{
     display: flex;
     flex-wrap: wrap;
-    
+    cursor: pointer;
      gap: 10px;
      border-bottom: solid gray;
      padding-bottom: 20px;
@@ -212,4 +217,48 @@ header{
     justify-content: center;
     gap: 15px;
 
+}
+
+/*  tooltip  */
+
+.tooltip-save{
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+
+.bookmark{
+    display: none;
+    border-radius: 3px;
+}
+
+.bookmark::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    bottom: -5px;
+    left: 15px;
+    z-index: -1;
+    
+    
+
+
+
+}
+
+.tooltip-save:hover .bookmark{
+    display: block;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: -140%;
+    left: -30%;
+    
+    padding: 10px;
+    
+    font-size: 10px;
 }
