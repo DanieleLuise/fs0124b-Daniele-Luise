@@ -17,21 +17,24 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    transition: background-color 0.7s ease;
+    transition: background-color 0.5s ease;
 
 }
-.a-nav a{
+.a-elenco{
     text-decoration: none;
     color: black;
     margin-left: 20px;
     
 }
-#a-finale{
+.a-finale{
     background-color: black;
     color: white;
     padding: 10px 10px;
     border-radius: 20px;
+    text-decoration: none;
+    transition:  background-color 0.5s ease;
 }
+
 .main-section{
 
     background-image: url(../imgs/svg/m.svg);
@@ -328,7 +331,9 @@ header{
 #navbar.scrolled{
     background-color: white;
 }
-.yellow-background{
+.a-finale.green-background{
     background-color: green;
     color: white;
+    
 }
+

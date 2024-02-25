@@ -20,11 +20,11 @@
 
         <div class="a-nav">
 
-                <a href="#">Our Story</a>
-                <a href="#">Membership</a>
-                <a href="#">Write</a>
-                <a href="#">Sign up</a>
-                <a id="a-finale" href="#">Get started</a>
+                <a class="a-elenco" href="#">Our Story</a>
+                <a class="a-elenco" href="#">Membership</a>
+                <a class="a-elenco" href="#">Write</a>
+                <a class="a-elenco" href="#">Sign up</a>
+                <a class="a-finale"  href="#">Get started</a>
                 
         </div>
 
@@ -453,14 +453,23 @@
     <script>
         window.addEventListener('scroll', function(){
             let navbar = document.getElementById('navbar');
-            if(window.scrollY > 0) {
+            let a = document.getElementsByClassName('a-finale');
+            let triggeroffset = 400;
+
+            if(window.scrollY > triggeroffset) {
                 navbar.classList.add('scrolled');
+               
+                a.classList.add('green-background');
+               
             } else {
                 navbar.classList.remove('scrolled');
+                a.classList.remove('green-background')
             }
 
 
         });
+
+
 
     </script>
     
