@@ -17,7 +17,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.7s ease;
 
 }
 .a-nav a{
