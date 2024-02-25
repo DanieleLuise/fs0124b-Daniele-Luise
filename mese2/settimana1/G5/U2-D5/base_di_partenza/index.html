@@ -453,7 +453,7 @@
     <script>
         window.addEventListener('scroll', function(){
             let navbar = document.getElementById('navbar');
-            let a = document.getElementsByClassName('a-finale');
+            let a = document.querySelector('.a-finale');
             let triggeroffset = 400;
 
             if(window.scrollY > triggeroffset) {
@@ -463,13 +463,13 @@
                
             } else {
                 navbar.classList.remove('scrolled');
-                a.classList.remove('green-background')
+                a.classList.remove('green-background');
             }
 
 
         });
 
-
+ 
 
     </script>
     
