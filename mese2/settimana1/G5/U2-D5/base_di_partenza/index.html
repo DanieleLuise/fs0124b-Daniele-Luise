@@ -14,7 +14,7 @@
 </head>
 <body>
 <header>
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="navbar">
         
         <img src="./assets/imgs/svg/logo.svg" alt="Logo-svg">
 
@@ -65,8 +65,26 @@
             <div class="articolo">
                 <div class="allinea">
                 <img src="./assets/imgs/image01.jpeg" >
-                <p>Tom cooper</p>
+                <div class="tooltip-name" >
+                
+                <p class="nome-autore">Tom cooper</p>
+                <div class="contenitore-tool">
+
+                    <div class="img-nome">
+                        <img src="./assets/imgs/image01.jpeg" >
+                        <h3>Tom Cooper</h3>
+                    </div>
+
+                    <p>Giornalista</p>
+                    <div class="follow-flex">
+                        <p>50k followers</p>
+                        <a class="a-follow">Follow</a>
+                    </div>
                 </div>
+                </div>
+
+                </div>
+
                 <h3>Ukraine War, 23 October 2022</h3>
                 <p id="p-gray"> Oct23 5 min read</p>
 
@@ -84,7 +102,7 @@
         <div class="articolo">
             <div class="allinea">
             <img src="./assets/imgs/image02.png" >
-            <p>Arthur Hayes in Entrepreneur's Handbook</p>
+            <p><span class="nome-autore">Arthur Hayes</span> in Entrepreneur's Handbook</p>
             </div>
             <h3>Comeback</h3>
             <p id="p-gray"> Oct26 24 min read</p>
@@ -103,7 +121,7 @@
         <div class="articolo">
             <div class="allinea">
             <img src="./assets/imgs/image03.jpeg" >
-            <p> Erin A Ross in Slackjaw</p>
+            <p> <span class="nome-autore">Erin A Ross </span>in Slackjaw</p>
             </div>
             <h3> How I Learned to Love My Breasts Even Though One Is A Horcrux For Voldemort</h3>
             <p id="p-gray"> Oct26 2 min read</p>
@@ -124,7 +142,7 @@
         <div class="articolo">
             <div class="allinea">
             <img src="./assets/imgs/image04.png" >
-            <p>Frank Mastropolo in The Riffk</p>
+            <p><span class="nome-autore">Frank Mastropolo</span>in The Riffk</p>
             </div>
             <h3>The Night Paul McCartney Donned a Disguise at Fillmore East</h3>
             <p id="p-gray"> Oct22 3 min read</p>
@@ -143,7 +161,7 @@
         <div class="articolo">
             <div class="allinea">
             <img src="./assets/imgs/image05.jpeg" >
-            <p>Frank Andrade in Towards Data Science</p>
+            <p><span class="nome-autore"> Andrade</span> in Towards Data Science</p>
             </div>
             <h3>5 Python Projects to Automate Your Life: From Beginner to Advanced</h3>
             <p id="p-gray"> Oct13 6min read</p>
@@ -162,7 +180,7 @@
         <div class="articolo">
             <div class="allinea">
             <img src="./assets/imgs/image06.png" >
-            <p>Wesley Smits in JavaScript in Plain English</p>
+            <p><span class="nome-autore"> Smits </span>in JavaScript in Plain English</p>
             </div>
             <h3>How To Make Visual Studio Code Look Amazing</h3>
             <p id="p-gray"> Oct23 5min read</p>
@@ -429,10 +447,22 @@
 
 
 
+<!--script per la navbar-->
 
 
+    <script>
+        window.addEventListener('scroll', function(){
+            let navbar = document.getElementById('navbar');
+            if(window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
 
-    <script></script>
+
+        });
+
+    </script>
     
 
 </body>

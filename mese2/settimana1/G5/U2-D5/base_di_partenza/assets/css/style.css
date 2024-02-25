@@ -1,5 +1,6 @@
 body{
     font-family: "Roboto", sans-serif;
+    background-color: rgba(255,255,255,255);
 }
 
 header{
@@ -16,7 +17,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
+    transition: background-color 0.3s ease;
 
 }
 .a-nav a{
@@ -209,6 +210,8 @@ header{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    color: gray;
+    cursor: pointer;
 
 
 }
@@ -261,4 +264,71 @@ header{
     padding: 10px;
     
     font-size: 10px;
+}
+
+.nome-autore{
+    cursor: pointer;
+
+}
+
+.tooltip-name{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contenitore-tool{
+    display: none;
+}
+
+.tooltip-name:hover .contenitore-tool{
+    display: block;
+    position: absolute;
+    top: -200%;
+    left: 80%;
+    background-color: white;
+    z-index: 2;
+    height: 120px;
+    width: 180px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1),-5px -5px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.contenitore-tool::before{
+    content: '';
+    background-color: white;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: -1;
+    transform: rotate(45deg);
+    left: -9px;
+    bottom: 50px;
+}
+.img-nome{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+.tooltip-name p{
+    margin-left: 10px;
+    
+    
+}
+
+.follow-flex{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* navbar che scorrendo cambia colore*/
+
+#navbar.scrolled{
+    background-color: white;
+}
+.yellow-background{
+    background-color: green;
+    color: white;
 }
