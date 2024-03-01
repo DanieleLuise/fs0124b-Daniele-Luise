@@ -11885,26 +11885,12 @@ header a:hover {
   width: fit-content;
 }
 
-.fit-cont {
-  width: fit-content;
-}
-
-.width-input {
-  margin-left: 132px;
-  width: 200px;
-}
-
-.width-label {
+.margin-left {
   margin-left: 135px;
 }
 
-.p-margin {
-  margin-left: 133px;
-}
-
-.bottone {
-  width: 100px;
-  margin-left: 128px;
+.fit-content-input {
+  width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
