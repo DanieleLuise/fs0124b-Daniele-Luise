@@ -1,0 +1,33 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+body{
+    background-color: black;
+}
+
+.logo-netflix{
+    width: 100px;
+}
+
+.avatar-img{
+    width: 40px;
+}
+.d-flex select{
+    width: 150px;
+    
+}
+.row img:hover{
+    scale: 1.3;
+}
+.row img{
+    width: 150px;
+}
+header a:hover{
+   cursor: pointer;
+}
+.navbar-paginaDue img{
+    width: 150px;
+    height: 70px;
+}
+.img-avatar{
+    width: 120px;
+}
