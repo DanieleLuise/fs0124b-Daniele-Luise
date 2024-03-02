@@ -41,3 +41,23 @@ header a:hover{
 .fit-content-input{
    width: 200px;
 }
+
+.checkbox-style{
+    background-color: gray;
+    border: none;
+    border: 2px solid white;
+    border-color: white;
+    box-shadow: none;
+    &:focus{
+        border: 2px solid white;
+        box-shadow: none;
+        
+    }
+    &:checked{
+        background-color: black;
+        
+        
+    }
+}
+
+

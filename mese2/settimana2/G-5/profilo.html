@@ -33,7 +33,7 @@
         
         <div class=" d-flex flex-column gap-2 ">
             <input  class="bg-secondary text-white mb-2" value=" Strive student" type="text" name="name" id="">
-            <label class="text-white ">Language:</label>
+            <label class="text-secondary ">Language:</label>
             <select class="form-select mb-3 text-white bg-black" aria-label="Default select example">
               <option selected>Language</option>
               <option value="1">English</option>
@@ -50,11 +50,39 @@
 
 
         <div class="d-flex flex-column margin-left mt-3 fit-content gap-1 border-top">
-    <label class=" text-secondary "> Maturity settings:</label>
-    <input  class="bg-secondary fit-content-input text-white  mb-2" value=" ALL MATURITY RATINGS" type="text" name="name" id="">
-    <p class=" text-white">Show titles of all maturity ratings for this profile</p>
-    <button type="button" class="btn btn-outline-light fit-content bg-black  text-secondary mb-3 ">EDIT</button>
+    <label class=" text-secondary mt-4 "> Maturity settings:</label>
+    <input  class="bg-secondary fit-content-input text-white mt-2 mb-2" value=" ALL MATURITY RATINGS" type="text" name="name" id="">
+    <p class=" text-secondary">Show titles of all maturity ratings for this profile</p>
+    <button type="button" class="btn btn-outline-light fit-content bg-black border border-secondary text-secondary mb-4 ">EDIT</button>
           </div>
+
+          <div class="border-top  margin-left">
+            <label class="mt-4 text-secondary">Autoplay Controls</label>
+            <div class="form-check mb-3">
+              <input class="form-check-input checkbox-style p-3" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label mx-2 mt-2" for="flexCheckChecked">
+                Autoplay next episode in a series on all devices.
+              </label>
+
+          </div>
+            <div class="form-check">
+              <input class="form-check-input checkbox-style p-3" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label mx-2 mt-2" for="flexCheckChecked">
+                Autoplay previews while browsing on all devices.
+              </label>
+
+          </div>
+
+         
+
+
+</div>
+
+
+<div class="mt-5 btn-group border-top  d-flex justify-content-between gap-2   ">
+  <button type="button" class="btn btn-outline-light active rounded-0 bg-black border border-secondary text-secondary mt-3 ">SAVE</button>
+  <button type="button" class="btn btn-outline-light rounded-0 bg-black border border-secondary text-secondary mt-3 ">CANCEL</button>
+  <button type="button" class="btn btn-outline-light rounded-0 bg-black border border-secondary text-secondary mt-3 ">DELETE PROFILE</button>
 
 
 

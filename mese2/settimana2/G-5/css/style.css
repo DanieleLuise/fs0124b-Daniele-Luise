@@ -11893,4 +11893,19 @@ header a:hover {
   width: 200px;
 }
 
+.checkbox-style {
+  background-color: gray;
+  border: none;
+  border: 2px solid white;
+  border-color: white;
+  box-shadow: none;
+}
+.checkbox-style:focus {
+  border: 2px solid white;
+  box-shadow: none;
+}
+.checkbox-style:checked {
+  background-color: black;
+}
+
 /*# sourceMappingURL=style.css.map */
