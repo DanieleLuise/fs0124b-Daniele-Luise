@@ -16,10 +16,11 @@ body{
     
 }
 .row img:hover{
-    scale: 1.3;
+    scale: 1.5;
+    transition-duration: 0.5s;
 }
-.row img{
-    width: 150px;
+ .row img{
+    width: 100%;
 }
 header a:hover{
    cursor: pointer;
@@ -27,6 +28,10 @@ header a:hover{
 .navbar-paginaDue img{
     width: 150px;
     height: 70px;
+}
+.cursor-icon{
+    cursor: pointer;
+
 }
 .img-avatar{
     width: 120px;
@@ -43,19 +48,20 @@ header a:hover{
 }
 
 .checkbox-style{
-    background-color: gray;
-    border: none;
-    border: 2px solid white;
-    border-color: white;
-    box-shadow: none;
+    background-color: transparent;
+   
+    border: 1px solid white;
+    
+   
     &:focus{
-        border: 2px solid white;
+        @extend .checkbox-style;
         box-shadow: none;
         
     }
     &:checked{
-        background-color: black;
-        
+        @extend .checkbox-style;
+        box-shadow: none;
+       
         
     }
 }
