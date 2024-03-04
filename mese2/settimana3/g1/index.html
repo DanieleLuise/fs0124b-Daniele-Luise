@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<form id="form-pet">
+  Nome animale <input type="text" label="petName" id="nome-animale" >
+  Nome padrone <input type="text" label="ownerName" id="nome-padrone" >
+specie
+<input name= "specie"  type="text" id="animali-specie">
+
+
+
+
+
+ razza
+<input name="razza" type="text"  id="animali-razza">
+
+invio
+ <input type="submit" value="animale">
+</form>
+
+<ul id="lista">
+    
+</ul>
+
+
+
+
+
+
+<script>
+
+ class User{
+
+    constructor(_name, _cognome, _age, _location){
+
+        this.firstName = _name;
+        this.lastName = _cognome;
+        this.age = _age;
+        this.location = _location;
+    }
+        mostraDettagli(){
+            console.log(`Il nome ${this.firstName} il cognome ${this.lastName} età ${this.age} luogo ${this.location}`)
+        }
+
+        confrontoEtà(utente2){
+            if(this.age > utente2.age){
+                return 'utente1 ha un età maggiore di utente2'
+            }
+        }
+
+ }
+
+ 
+ let utente1 = new User('Mario','Bianco', 33,'Napoli')
+ let utente2 = new User('Daniele', 'Luise', 20,'napoli')
+ console.log(utente1)
+ console.log(utente2)
+ utente1.mostraDettagli()
+ utente2.mostraDettagli()
+ console.log(utente1.confrontoEtà(utente2))
+
+ //secondo esercizio
+
+
+ class Pet{
+
+    constructor(petName, ownerName, species, bread){
+        this.petName = petName;
+        this.ownerName = ownerName;
+        this.species = species;
+        this.bread = bread;
+    }
+
+    padroneUguale(altroPet){
+    return this.ownerName == altroPet.ownerName
+
+    }
+
+ }
+
+   pets = []
+    document.getElementById('form-pet').addEventListener('submit', function(event){
+        event.preventDefault()
+       let petName = document.getElementById('nome-animale').value
+       let ownerName = document.getElementById('nome-padrone').value
+       let species = document.getElementById('animali-specie').value
+       let bread = document.getElementById('animali-razza').value
+       let animali = new Pet(petName, ownerName, species, bread)
+       pets.push(animali) 
+       console.log(pets)
+       let listaAnimali = document.getElementById('lista')
+       listaAnimali.innerHTML=''
+        for(let animali of pets){
+            let li = document.createElement('li')
+            li.textContent = `${animali.petName} , ${animali.ownerName} , ${animali.species}, ${animali.bread}`
+            listaAnimali.appendChild(li)
+        } 
+    })
+    
+
+
+   
+  
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
