@@ -25,7 +25,11 @@ Nome
  </ul>
 <!-- Html sopra -->
 
+<p> Il valore del contatore è: <span id="contatore"></span> </p>
 
+
+
+<!--Html esercizio2-->
 
 <script>
  
@@ -70,8 +74,21 @@ Nome
 
 //secondo esercizio
 
+function avviaContatore(){
+    if(sessionStorage.contatore){
+        contatore = parseInt(sessionStorage.contatore);
 
+    } else {
+        contatore = 0;
+    }
+    setInterval(function(){
+        contatore++;
+        sessionStorage.contatore = contatore;
+        document.getElementById('contatore').innerText = contatore;
+    } , 1000)
 
+}
+ avviaContatore();
 
 </script>
 
