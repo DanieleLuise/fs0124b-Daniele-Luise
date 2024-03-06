@@ -9,7 +9,23 @@
 </head>
 <body>
     
-  
+  <div class="container mb-3" id="carrello">
+<button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Carrello</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Lista della spesa</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul id="elenco-carrello">
+
+    </ul>
+  </div>
+</div>
+
+
+  </div>
 
 
  <div class="container" id="cont">
@@ -78,13 +94,39 @@
             
             bottone.addEventListener('click', () => {
                 col.remove()
+            }) // bottone di rimozione film
+
+
+            let bottoneAdd = document.createElement('button')
+            bottoneAdd.classList.add('btn', 'btn-warning', 'mx-3')
+            bottoneAdd.innerText = 'Aggiungi al carrello'
+            body.append(bottoneAdd)
+
+            bottoneAdd.addEventListener('click', () => {
+                let aggiungi = document.querySelector('#elenco-carrello')
+                let aggiungiCarrello = document.createElement('li')
+                aggiungiCarrello.innerText = libro.title
+                
+
+                aggiungi.append(aggiungiCarrello) 
+
+                localStorage.setItem('spesa', libro.title) // bottone aggiungi carrello
+
+                let bottoneRim = document.createElement('button')
+                bottoneRim.classList.add('btn', 'btn-danger', 'mx-2')
+                bottoneRim.innerText = 'Rimuovi dal carrello', 
+                aggiungiCarrello.append(bottoneRim)
+
+                bottoneRim.addEventListener('click', () => {
+                aggiungiCarrello.remove()
+                
+                localStorage.removeItem('spesa')
+                    
             })
+            }) 
 
 
-        
-
-            
-
+           
 
            }
 
@@ -95,7 +137,9 @@
 
 
 
-    </script>
 
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
