@@ -16,11 +16,15 @@ for(let telefono of cell){
 
     let nome = card.querySelector('#nome')
     let descrizione = card.querySelector('#descrizione')
+    let img = card.querySelector('#img')
     let btnModifica = card.querySelector('#btn-modifica')
     let btnScopri = card.querySelector('#btn-scopri')
 
-    nome.innerText = telefono.nome
-    descrizione.innerText = telefono.descrizione
+    nome.innerText = telefono.name
+    descrizione.innerText = telefono.description
+    img.src = telefono.imageUrl
+    editBtn.href = `edit.html?id=${telefono._id}`
+
     
 
 
@@ -34,8 +38,8 @@ for(let telefono of cell){
 
 function generaClone(){
     
-    let template = document.querySelector('#t-content')
+    let template = document.querySelector('.t-content')
     let clone = template.content.cloneNode(true)
-
+    
     return clone;
 }

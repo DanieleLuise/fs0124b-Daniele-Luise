@@ -2,19 +2,19 @@ const salva = document.querySelector('#btn-salva')
 
 salva.addEventListener('click', function (e){
 
-let nome = document.querySelector('#nome').value
+let name = document.querySelector('#nome').value
 let brand = document.querySelector('#brand').value
-let prezzo = document.querySelector('#prezzo').value
-let immagine = document.querySelector('#id-url').value
-let descrizione = document.querySelector('#textarea').value
+let price = document.querySelector('#prezzo').value
+let imageUrl = document.querySelector('#id-url').value
+let description = document.querySelector('#textarea').value
 
 
 let cell = {
-    nome,
+    name,
+    description,
     brand,
-    prezzo,
-    immagine,
-    descrizione
+    imageUrl,
+    price
 }
 
 fetch('https://striveschool-api.herokuapp.com/api/product/',{
@@ -28,7 +28,7 @@ fetch('https://striveschool-api.herokuapp.com/api/product/',{
 })
 .then(res => res.json())
 .then(res => {
-    location.Href = 'index.html'
+    location.href = 'index.html'
 })
 
 
