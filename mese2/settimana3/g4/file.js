@@ -14,19 +14,27 @@ async function chiamata(query){
             }
 
 
-        }).then(dati => dati.json())
+        }).then(rep => rep.json())
 }
 
 
-    chiamata('cake').then(cakes => {
+   
 
-        console.log(cakes);
+        
 
-         let btn = document.querySelector('#bottone-load')
+         let btn = document.querySelector('.btn')
             btn.addEventListener('click', () =>{
+                chiamata("pizza").then((dati) =>{
+                    console.log(dati);
+                    let img = document.querySelectorAll(".card-img-top");
+                    dati.photos.forEach((photo, i) => {
+                        img[i].src = photo.src.medium;
+                        
+                    });
 
-                
-                    chiamata('cake')
-            })
+                });
 
-    })
+                   
+            });
+
+ 
