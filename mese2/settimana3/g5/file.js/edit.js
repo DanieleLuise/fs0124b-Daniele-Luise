@@ -16,11 +16,13 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${id}`,{
     let name = document.querySelector('#nome')
     let brand = document.querySelector('#brand')
     let price = document.querySelector('#prezzo')
+    let description = document.querySelector('#descrizione')
     let imgUrl = document.querySelector('#id-url')
 
     name.value =  telefono.name
     brand.value = telefono.brand
     price.value = telefono.price
+    description.value = telefono.description
     imgUrl.value = telefono.imgUrl
 
 })

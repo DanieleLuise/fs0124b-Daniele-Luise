@@ -18,13 +18,13 @@ for(let telefono of cell){
     let descrizione = card.querySelector('#descrizione')
     let img = card.querySelector('#img')
     let editBtn = card.querySelector('#btn-modifica')
-    
+    let scopriBtn = card.querySelector('#btn-scopri')
 
     nome.innerText = telefono.name
     descrizione.innerText = telefono.description
     img.src = telefono.imageUrl
     editBtn.href = `edit.html?id=${telefono._id}`
-
+    scopriBtn.href = `details.html?id=${telefono._id}`
 
 
 
