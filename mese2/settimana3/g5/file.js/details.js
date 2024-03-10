@@ -20,7 +20,7 @@ fetch(`https://striveschool-api.herokuapp.com/api/product/${id}`,{
 
     name.innerText = telefono.name
     brand.innerText = telefono.brand
-    price.innerText = telefono.price
+    price.innerText = telefono.price + '$'
     description.innerText = telefono.description
     imgUrl.src = telefono.imageUrl
 
