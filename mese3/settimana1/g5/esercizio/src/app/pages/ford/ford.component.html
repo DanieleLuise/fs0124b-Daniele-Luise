@@ -1,0 +1,16 @@
+<div class="d-flex gap-4">
+
+  <div  *ngFor="let auto of ford">
+    <div [ngClass]="{'bg-success':auto.available,'bg-danger':!auto.available}" class="card">
+      <div class="card-body">
+        <img [src]="auto.modelImage" alt="">
+        <h5 class="card-title">{{auto.brand}}</h5>
+        <p class="card-text">{{auto.price | currency:'EUR'}} </p>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
