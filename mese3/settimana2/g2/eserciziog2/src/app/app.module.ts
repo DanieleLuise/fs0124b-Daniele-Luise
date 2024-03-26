@@ -10,6 +10,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { FormsModule } from '@angular/forms';
+import { UppercasePipe } from './uppercase.pipe';
+import { ColoreDirective } from './colore.directive';
 
 
 
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     HomepageComponent,
     PostDetailComponent,
     SinglePostComponent,
+    UppercasePipe,
+    ColoreDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
