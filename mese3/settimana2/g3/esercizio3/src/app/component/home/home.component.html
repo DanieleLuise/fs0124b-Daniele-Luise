@@ -1,1 +1,14 @@
-<p>home works!</p>
+<div class="card" *ngFor="let p of prod" >
+
+  <div class="card-body"  >
+    <h5 pclass="card-title"> {{p.title}}</h5>
+    <p  class="card-text">{{p.description}}</p>
+    <p class="card-text">{{p.price}}</p>
+    <p class="card-text">{{p.brand}}</p>
+    <button  class="btn btn-warning"> Aggiungi preferiti</button>
+      <button class="btn btn-danger">Elimina</button>
+  </div>
+</div>
+
+
+

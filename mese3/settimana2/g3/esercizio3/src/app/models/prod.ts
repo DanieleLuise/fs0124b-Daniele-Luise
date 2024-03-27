@@ -1,16 +1,9 @@
+import { IProducts } from "./i-products"
+
 export interface IProd {
-  id: number
-  title: string
-  description: string
-  price: number
-  discountPercentage: number
-  rating: number
-  stock: number
-  brand: string
-  category: string
-  thumbnail: string
-  images: string[]
+  products:IProducts[]
   total: number
   skip: number
   limit: number
+
 }
