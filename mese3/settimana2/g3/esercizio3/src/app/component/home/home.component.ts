@@ -10,15 +10,20 @@ import { IProducts } from '../../models/i-products';
 export class HomeComponent {
 
    prod:IProducts [] = []
+   arrayPreferiti:IProducts[] = []
 
    constructor(private prodSvc:ProductsService){}
    ngOnInit(){
     this.prodSvc.getAll().subscribe(prod => {
       this.prod = prod.products
     })
-   }
+  }
 
-   arrayPreferiti:[] = []
+
+  aggiungiAiPreferiti(p: IProducts){
+   this.arrayPreferiti.push(p);
+  }
+
 
 
 }
