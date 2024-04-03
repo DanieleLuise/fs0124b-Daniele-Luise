@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,17 +7,20 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
+
 form!:FormGroup;
+
+
 constructor(private fb: FormBuilder){}
 
 ngOnInit(){
 
 
     this.form = this.fb.group({
-      nome: this.fb.control(null),
-      cognome: this.fb.control(null),
-      password: this.fb.control(null),
-      controllaPassword: this.fb.control(null)
+      nome: this.fb.control(null,[Validators.required]),
+      cognome: this.fb.control(null,[Validators.required]),
+      password: this.fb.control(null,[Validators.required]),
+      controllaPassword: this.fb.control(null,[Validators.required])
     })
 
 }
