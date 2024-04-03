@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+<input type="text" formControlName="nome" class="form-control"
+placeholder="nome">
+
+
+<input type="text" formControlName="cognome" class="form-control"
+placeholder="cognome">
+
+<input type="password" formControlName="password" class="form-control"
+placeholder="password">
+
+<input type="password" formControlName="controllaPassword" class="form-control"
+placeholder="controllaPassword">
+
+<button (click)="metodo()" class="btn btn-success">Invia</button>
+</form>
