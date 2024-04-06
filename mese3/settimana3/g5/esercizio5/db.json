@@ -1,5 +1,46 @@
 {
-  "users": [],
-  "movie-popular":[],
-  "favorites":[]
+  "users": [
+    {
+      "email": "mario@mario.it",
+      "password": "$2a$10$DkC8a7uOsllYjCuGZx6ikun7kx1Gct4E2FvV8yn8GG/REzhK4fjEe",
+      "name": "mario",
+      "id": 1
+    },
+    {
+      "email": "daniele@daniele",
+      "password": "$2a$10$4mWZzgaNaXgWKaQKll2KBOX1FCQgwVMXfA.HvGP.56pkyZjrj120.",
+      "name": "mario",
+      "id": 2
+    },
+    {
+      "email": "dani@dani.it",
+      "password": "$2a$10$S5tstRasiTpbAe49cZSzPOgX/SCa9WNn.ri7RnQUbmaU2adSc7.e6",
+      "name": "dani",
+      "id": 3
+    },
+    {
+      "email": "mario@daniele.it",
+      "password": "$2a$10$YvcNeFByoHD5qyZBwnuinO9XJEJFSUDhANxEe/CURx7GMW8m5cTli",
+      "name": "mario",
+      "id": 4
+    },
+    {
+      "email": "dani@simo.it",
+      "password": "$2a$10$tApca.B6dCUepnGxks1IBeTJAtAZDZuVxhrZxdPEieM/.AadSgeMa",
+      "name": "dani",
+      "id": 5
+    },
+    {
+      "email": "pablo@pablo",
+      "password": "$2a$10$78kxsOJNg80ihVG/hgd6gudXEV0a2cEWQ1TUgWAzBFEmuf8Kdr1XK",
+      "name": "pablo",
+      "id": 6
+    },
+    {
+      "email": "giova@giova.it",
+      "password": "$2a$10$jEL89PxJK3la0qd20kNog.MaS0OzLDlUAf8aNZGogtutNOYoudM7.",
+      "name": "giova",
+      "id": 7
+    }
+  ]
 }
