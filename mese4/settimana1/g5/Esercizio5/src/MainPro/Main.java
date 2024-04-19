@@ -9,19 +9,21 @@ import Classi.immagine;
 public class Main {
 
     public static void main(String[] args) {
+        //Creo e utilizzo gli oggetti
         audio a = new audio("test",4,5);
             a.esegui();
-            a.abbassaVolume();
+            a.abbassaVolume();  //faccio le varie azioni
             a.alzaVolume();
 
         video v = new video("test2",5,7,3);
             v.aumentaLuminosità();
+                                    //faccio le varie azioni
             v.abbassaLuminosità();
 
 
         immagine i = new immagine("test3",3);
             i.esegui();
-            i.abbassaLuminosità();
+            i.abbassaLuminosità();      //faccio le varie azioni
             i.aumentaLuminosità();
 
     }

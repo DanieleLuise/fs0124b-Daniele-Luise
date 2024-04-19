@@ -1,5 +1,5 @@
 package Classi;
-
+//qui estendo la classe astratta per il titolo e implemento l'interfaccia
 public class immagine extends ElementoMultimediale implements Luminosità {
     private int luminosità;
     private static final int lumMax = 1;
