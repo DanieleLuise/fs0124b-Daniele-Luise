@@ -5,6 +5,7 @@ public class immagine extends ElementoMultimediale implements Luminosità {
     private static final int lumMax = 1;
     private static final int lumMin = 5;
 
+    //costruttore della classe immagine
     public immagine(String titolo,int luminosità) {
         super(titolo);
         this.luminosità = convertiPositivo(luminosità);
@@ -21,6 +22,8 @@ public class immagine extends ElementoMultimediale implements Luminosità {
     show();
     }
 
+    //quì faccio il metodo per vedere l img con la
+    // luminosità corrente e aggiungo asterischi in base alla luminosità
     private void show() {
         String livelloLuminosità = "";
         for (int i = 0; i < luminosità; i++){
