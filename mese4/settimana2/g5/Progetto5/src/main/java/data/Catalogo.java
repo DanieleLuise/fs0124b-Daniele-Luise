@@ -7,6 +7,15 @@ public abstract class Catalogo {
     private Integer annoPubblicazione;
     private Integer numeroPagine;
 
+    @Override
+    public String toString() {
+        return "Catalogo{" +
+                "ISBN=" + ISBN +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                '}';
+    }
     public Catalogo(String titolo, Integer annoPubblicazione, Integer numeroPagine) {
 
         this.ISBN = nextISBN;
@@ -17,11 +26,11 @@ public abstract class Catalogo {
     }
 
 
-    public static int getNextISBN() {
+    public static Integer getNextISBN() {
         return nextISBN;
     }
 
-    public static void setNextISBN(int nextISBN) {
+    public static void setNextISBN(Integer nextISBN) {
         Catalogo.nextISBN = nextISBN;
     }
 

@@ -4,9 +4,9 @@ import data.Catalogo;
 
 public interface Archivio {
     void add(Catalogo c);
-    void deleteISBN(int ISBN);
+    void deleteISBN(Integer ISBN);
     Optional<Catalogo> getISBN (Integer ISBN);
-    void getAnno(int anno);
+    Optional<Catalogo> getAnno(Integer anno);
     void getAutore(String autore);
 
 }
