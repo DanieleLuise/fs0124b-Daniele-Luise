@@ -23,7 +23,26 @@ public class Main {
 
 
 
-   System.out.println(archivio.getLista());
+        System.out.println("Archivio completo:");
+        archivio.getLista().forEach(System.out::println);
 
+        // Test della ricerca per ISBN
+        System.out.println("\nRicerca per ISBN:");
+        archivio.getISBN(1).ifPresentOrElse(System.out::println, () -> System.out.println("Elemento non trovato"));
+
+        // Test della ricerca per autore
+        System.out.println("\nRicerca per autore:");
+        archivio.getAutore("varano");
+
+        // Test della ricerca per anno di pubblicazione
+        System.out.println("\nRicerca per anno di pubblicazione:");
+        archivio.getByAnno(2022).forEach(System.out::println);
+
+        // Test rimozione elemento
+        archivio.deleteISBN(1);
+
+        // Stampa archivio completo dopo eliminazione
+        System.out.println("Archivio completo:");
+        archivio.getLista().forEach(System.out::println);
     }
 }
