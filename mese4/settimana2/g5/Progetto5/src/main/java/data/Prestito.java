@@ -1,6 +1,9 @@
 package data;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -9,6 +12,9 @@ import java.util.List;
 @Entity
 
 public class Prestito {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Utente utente;
     private List<Catalogo> elementoPrestato = new ArrayList<>();
     private LocalDate dataInizioPrestito;

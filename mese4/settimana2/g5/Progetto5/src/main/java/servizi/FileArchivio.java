@@ -1,22 +1,15 @@
 package servizi;
 
 import data.Catalogo;
-import data.Libri;
-import data.Periodicità;
-import data.Riviste;
+import data.Prestito;
+import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,15 +17,18 @@ public class FileArchivio implements Archivio {
 
     private static final Logger logger = LoggerFactory.getLogger(FileArchivio.class);
 
-    private final EntityManager em = Persistence.createEntityManagerFactory("postgres").createEntityManager();
+    protected EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres");
 
-    private final ArrayList<Catalogo> listaCatalogo = new ArrayList<>();
+    protected EntityManager em = emf.createEntityManager();
+
+
+
 
     // File CSV di destinazione
     private File f = new File("./catalogo.csv");
 
     // Metodo per salvare i cataloghi nel file CSV
-
+    @Override
     public void save(Catalogo cat) {
         var t = em.getTransaction();
         t.begin();
@@ -42,52 +38,86 @@ public class FileArchivio implements Archivio {
 
     }
 
-    // Metodo per caricare i cataloghi dal file CSV
 
-    // Aggiungo un nuovo catalogo alla lista e salva l'archivio aggiornato
-    @Override
-    public void add(Catalogo catalogo) {
 
-    }
-    // Rimuovo un catalogo in base all'ISBN e salva l'archivio aggiornato
+
+
+    // Rimuovo un catalogo in base all'ISBN
     @Override
     public void deleteISBN(Integer ISBN) {
 
     }
 
     @Override
+    public List<Catalogo> getByAutore(String autore) {
+
+        try {
+            var query = em.createNamedQuery("GET_AUTORE");
+
+            query.setParameter("AUTORE", autore);
+
+            List<Catalogo> result = query.getResultList();
+
+            return result;
+
+        }catch (Exception e) {
+            logger.error("Elemento con ISBN spec non esiste", e);
+            return null;
+        }
+
+    }
+    @Override
+    public List<Catalogo> getAnno(Integer AnnoPubblicazione) {
+        try {
+            var query = em.createNamedQuery("GET_BY_ANNO");
+            query.setParameter("AnnoPubblicazione", AnnoPubblicazione);
+            List<Catalogo> result = query.getResultList();
+            return result;
+        }catch (Exception e) {
+            logger.error("Nessun libro uscito in questo anno nel catalogo", e);
+            return null;
+        }
+    }
+
+
+
+    @Override
+    public Catalogo getByTitolo(String titolo) {
+        return null;
+    }
+
+    @Override
+    public List<Catalogo> getElementiInPrestito(Integer numeroTessera) {
+        return List.of();
+    }
+
+    @Override
+    public List<Prestito> getPrestitiScadutiNonRestituiti() {
+        return List.of();
+    }
+
+    @Override
     public Optional<Catalogo> getISBN(Integer ISBN) {
         try {
-            var c = (Catalogo) em.createNamedQuery(Queries.GET_ISBN).setParameter("id", listaCatalogoId).getSingleResult();
-            return Optional.of(c);
-        } catch (Exception ex) {
-            log.error("Exception searching catalogo by id", ex);
+            var query = em.createNamedQuery("GET_ISBN");
+            query.setParameter("ISBN", ISBN);
+            var cat = (Catalogo) query.getSingleResult();
+            return Optional.of(cat);
+        } catch (Exception e) {
+            logger.error("Exception searching catalogo by id", e);
             return Optional.empty();
         }
     }
 
-    @Override
-    public Optional<Catalogo> getAnno(Integer anno) {
-        return Optional.empty();
-    }
-
-    @Override
-    public void getAutore(String autore) {
-
-    }
 
 }
 
-    @Override
-    public Optional<Catalogo> getAnno(Integer anno) {
-        return Optional.empty();
-    }
 
-    @Override
-    public void getAutore(String autore) {
-        // Trova un catalogo per ISBN e restituisci un Optional
-        listaCatalogo.stream().filter(el -> el instanceof Libri && ((Libri) el).getAutore().equals(autore)).forEach(System.out::println);
-    }
 
-    }
+
+
+
+
+
+
 

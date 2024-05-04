@@ -6,7 +6,8 @@ import jakarta.persistence.*;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @DiscriminatorColumn(name = "Elemento_catalogo", discriminatorType = DiscriminatorType.STRING)
 @NamedQuery(name = "GET_ISBN", query = "SELECT c Catalogo AS c WHERE ISBN = :ISBN")
-
+@NamedQuery(name = "GET_ANNO", query = "SELECT c Catalogo AS c WHERE annopubblicazione = :ANNOPUBBLICAZIONE")
+@NamedQuery(name = "GET_AUTORE", query = "SELECT C Catalogo AS c WHERE autore = :AUTORE")
 public abstract class Catalogo {
     @Id
     @GeneratedValue
