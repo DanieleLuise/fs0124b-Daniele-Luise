@@ -9,11 +9,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+
 
 public class Prestito {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private Utente utente;
     private List<Catalogo> elementoPrestato = new ArrayList<>();

@@ -4,7 +4,7 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("Libro")
+@DiscriminatorValue("Libri")
 public class Libri extends Catalogo {
 
     private String autore;

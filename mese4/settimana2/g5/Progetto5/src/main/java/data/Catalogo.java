@@ -5,9 +5,10 @@ import jakarta.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @DiscriminatorColumn(name = "Elemento_catalogo", discriminatorType = DiscriminatorType.STRING)
-@NamedQuery(name = "GET_ISBN", query = "SELECT c Catalogo AS c WHERE ISBN = :ISBN")
-@NamedQuery(name = "GET_ANNO", query = "SELECT c Catalogo AS c WHERE annopubblicazione = :ANNOPUBBLICAZIONE")
-@NamedQuery(name = "GET_AUTORE", query = "SELECT C Catalogo AS c WHERE autore = :AUTORE")
+@NamedQuery(name = "GET_ISBN", query = "SELECT c FROM Catalogo c WHERE c.ISBN = :ISBN")
+@NamedQuery(name = "GET_ANNO", query = "SELECT c FROM Catalogo c WHERE c.annoPubblicazione = :AnnoPubblicazione")
+@NamedQuery(name = "GET_AUTORE", query = "SELECT c FROM Catalogo c WHERE c.autore = :AUTORE")
+
 public abstract class Catalogo {
     @Id
     @GeneratedValue
@@ -59,5 +60,15 @@ public abstract class Catalogo {
 
     public void setNumeroPagine(Integer numeroPagine) {
         this.numeroPagine = numeroPagine;
+    }
+
+    @Override
+    public String toString() {
+        return "Catalogo{" +
+                "ISBN=" + ISBN +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                '}';
     }
 }

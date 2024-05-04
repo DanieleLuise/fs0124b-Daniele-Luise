@@ -6,12 +6,11 @@ import jakarta.persistence.Id;
 
 import javax.xml.crypto.Data;
 
-@Entity
+
 
 public class Utente {
     @Id
     @GeneratedValue
-
     private long id;
     private String nome;
     private String cognome;

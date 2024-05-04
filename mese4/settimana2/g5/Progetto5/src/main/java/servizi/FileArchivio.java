@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,8 +25,7 @@ public class FileArchivio implements Archivio {
 
 
 
-    // File CSV di destinazione
-    private File f = new File("./catalogo.csv");
+
 
     // Metodo per salvare i cataloghi nel file CSV
     @Override
@@ -46,26 +46,39 @@ public class FileArchivio implements Archivio {
     @Override
     public void deleteISBN(Integer ISBN) {
 
+            try {
+                Catalogo catalogo = em.find(Catalogo.class, ISBN);
+
+                if (catalogo != null) {
+                    var t = em.getTransaction();
+                    t.begin();
+                    em.remove(catalogo);
+                    t.commit();
+                    logger.info("Catalogo con ISBN {} rimosso con successo", ISBN);
+                } else {
+                    logger.warn("Nessun catalogo trovato con ISBN {}", ISBN);
+                }
+            } catch (Exception e) {
+                logger.error("Errore durante la rimozione del catalogo con ISBN {}", ISBN, e);
+            }
+
     }
 
     @Override
     public List<Catalogo> getByAutore(String autore) {
 
-        try {
-            var query = em.createNamedQuery("GET_AUTORE");
-
-            query.setParameter("AUTORE", autore);
-
-            List<Catalogo> result = query.getResultList();
-
-            return result;
-
-        }catch (Exception e) {
-            logger.error("Elemento con ISBN spec non esiste", e);
-            return null;
+            try {
+                var query = em.createNamedQuery("GET_AUTORE");
+                query.setParameter("AUTORE", autore);
+                List<Catalogo> result = query.getResultList();
+                return result;
+            } catch (Exception e) {
+                logger.error("Elemento con autore specificato non esiste", e);
+                return Collections.emptyList(); // Ritorna una lista vuota in caso di errore o nessun risultato
+            }
         }
 
-    }
+
     @Override
     public List<Catalogo> getAnno(Integer AnnoPubblicazione) {
         try {

@@ -18,7 +18,11 @@ public class Main {
         Libri libri2 = new Libri("ggg",2022,32,"gio","giallo");
 
 
-        FileArchivio.save(libri1);
-        System.out.println(FileArchivio.getByAutore("Feee"));
+       // FileArchivio.save(libri1);
+       // FileArchivio.save(libri2);
+
+        //FileArchivio.getByAutore("daniele");
+       // FileArchivio.deleteISBN(103);
+        System.out.println(FileArchivio.getByAutore(libri2.getAutore()));
     }
 }
