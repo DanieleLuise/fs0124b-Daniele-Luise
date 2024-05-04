@@ -1,9 +1,24 @@
 package data;
 
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Libro")
 public class Libri extends Catalogo {
 
     private String autore;
     private String genere;
+
+
+    public Libri( String titolo, Integer annoPubblicazione, Integer numeroPagine,String autore, String genere) {
+        super(titolo, annoPubblicazione, numeroPagine);
+        this.autore = autore;
+        this.genere = genere;
+    }
+    public Libri () {
+
+    }
 
     public String getAutore() {
         return autore;
@@ -21,18 +36,11 @@ public class Libri extends Catalogo {
         this.genere = genere;
     }
 
-    public Libri( String titolo, Integer annoPubblicazione, Integer numeroPagine, String autore, String genere) {
-        super(titolo, annoPubblicazione, numeroPagine);
-        this.autore = autore;
-        this.genere = genere;
-    }
-        @Override
-        public String toString() {
-            return super.toString() + "Libri{" +
-                    "autore='" + autore + '\'' +
-                    ", genere='" + genere + '\'' +
-                    '}';
-
-
+    @Override
+    public String toString() {
+        return "Libri{" +
+                "autore='" + autore + '\'' +
+                ", genere='" + genere + '\'' +
+                '}';
     }
 }

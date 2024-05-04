@@ -1,38 +1,32 @@
 package data;
 
+import jakarta.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@DiscriminatorColumn(name = "Elemento_catalogo", discriminatorType = DiscriminatorType.STRING)
+@NamedQuery(name = "GET_ISBN", query = "SELECT c Catalogo AS c WHERE ISBN = :ISBN")
+
 public abstract class Catalogo {
-    private static int nextISBN = 1;
+    @Id
+    @GeneratedValue
     private Integer ISBN;
     private String titolo;
     private Integer annoPubblicazione;
     private Integer numeroPagine;
 
-    @Override
-    public String toString() {
-        return "Catalogo{" +
-                "ISBN=" + ISBN +
-                ", titolo='" + titolo + '\'' +
-                ", annoPubblicazione=" + annoPubblicazione +
-                ", numeroPagine=" + numeroPagine +
-                '}';
-    }
+
     public Catalogo(String titolo, Integer annoPubblicazione, Integer numeroPagine) {
 
-        this.ISBN = nextISBN;
-        nextISBN ++;
         this.titolo = titolo;
         this.annoPubblicazione = annoPubblicazione;
         this.numeroPagine = numeroPagine;
     }
 
+    public Catalogo(){
 
-    public static Integer getNextISBN() {
-        return nextISBN;
     }
 
-    public static void setNextISBN(Integer nextISBN) {
-        Catalogo.nextISBN = nextISBN;
-    }
 
     public Integer getISBN() {
         return ISBN;

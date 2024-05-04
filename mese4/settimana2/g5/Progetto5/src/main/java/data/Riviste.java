@@ -1,11 +1,17 @@
 package data;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Riviste extends Catalogo {
     private Periodicità periodicità;
 
-    public Riviste(String titolo, int annoPubblicazione, int numeroPagine, Periodicità periodicità) {
-        super(titolo, annoPubblicazione, numeroPagine);
-        this.periodicità = periodicità;
+
+    public Riviste(String titolo, Integer annoPubblicazione, Integer numeroPagine) {
+        super( titolo, annoPubblicazione, numeroPagine);
+    }
+    public Riviste(){
+
     }
 
     public Periodicità getPeriodicità() {
@@ -18,9 +24,8 @@ public class Riviste extends Catalogo {
 
     @Override
     public String toString() {
-        return super.toString() + "Riviste{" +
+        return "Riviste{" +
                 "periodicità=" + periodicità +
                 '}';
     }
-
 }
