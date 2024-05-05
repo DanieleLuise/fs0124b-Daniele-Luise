@@ -2,14 +2,12 @@ package servizi;
 
 import data.Catalogo;
 import data.Prestito;
-import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -95,8 +93,16 @@ public class FileArchivio implements Archivio {
 
 
     @Override
-    public Catalogo getByTitolo(String titolo) {
-        return null;
+    public List<Catalogo> getByTitolo(String titolo) {
+        try {
+            var query = em.createNamedQuery("GET_BY_TITOLO");
+            query.setParameter("TITOLO", titolo);
+            List<Catalogo> result = query.getResultList();
+            return result;
+        } catch (Exception e) {
+            logger.error("Errore durante la ricerca per titolo", e);
+            return Collections.emptyList();
+        }
     }
 
     @Override

@@ -12,7 +12,7 @@ public interface Archivio {
     void deleteISBN(Integer ISBN);
     public List<Catalogo> getByAutore(String autore);
     public List<Catalogo> getAnno(Integer annoPubblicazione);
-    public Catalogo getByTitolo(String titolo);
+    public List<Catalogo> getByTitolo(String titolo);
 
     public List<Catalogo> getElementiInPrestito(Integer numeroTessera);
 

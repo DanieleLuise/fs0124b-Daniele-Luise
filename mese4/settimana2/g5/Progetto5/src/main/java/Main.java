@@ -20,9 +20,9 @@ public class Main {
 
        // FileArchivio.save(libri1);
        // FileArchivio.save(libri2);
-
+        System.out.println(FileArchivio.getByAutore("daniele"));
         //FileArchivio.getByAutore("daniele");
        // FileArchivio.deleteISBN(103);
-        System.out.println(FileArchivio.getByAutore(libri2.getAutore()));
+       // System.out.println(FileArchivio.getByAutore(libri2.getAutore()));
     }
 }
