@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 @NamedQuery(name = "GET_ISBN", query = "SELECT c FROM Catalogo c WHERE c.ISBN = :ISBN")
 @NamedQuery(name = "GET_ANNO", query = "SELECT c FROM Catalogo c WHERE c.annoPubblicazione = :AnnoPubblicazione")
 @NamedQuery(name = "GET_AUTORE", query = "SELECT c FROM Catalogo c WHERE c.autore = :AUTORE")
-@NamedQuery(name = "GET_BY_TITOLO", query = "SELECT c FROM Catalogo c WHERE c.titolo = :TITOLO")
+@NamedQuery(name = "GET_BY_TITOLO", query = "SELECT c FROM Catalogo c WHERE c.titolo LIKE CONCAT('%', :titolo, '%')")
 public abstract class Catalogo {
     @Id
     @GeneratedValue

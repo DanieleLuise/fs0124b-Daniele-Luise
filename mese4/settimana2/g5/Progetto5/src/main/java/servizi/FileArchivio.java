@@ -96,7 +96,7 @@ public class FileArchivio implements Archivio {
     public List<Catalogo> getByTitolo(String titolo) {
         try {
             var query = em.createNamedQuery("GET_BY_TITOLO");
-            query.setParameter("TITOLO", titolo);
+            query.setParameter("titolo", titolo);
             List<Catalogo> result = query.getResultList();
             return result;
         } catch (Exception e) {
