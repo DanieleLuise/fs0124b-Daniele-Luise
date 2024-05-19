@@ -21,8 +21,8 @@ public class Prenotazione extends Base{
     private LocalDate dataPrenotazione;
     private LocalDate dataScadenza;
  @Builder
-    public Prenotazione(Long id, Postazioni postazioni, Utente utenti, LocalDate dataPrenotazione) {
-        super(id);
+    public Prenotazione( Postazioni postazioni, Utente utenti, LocalDate dataPrenotazione) {
+
         this.postazioni = postazioni;
         this.utenti = utenti;
         this.dataPrenotazione = dataPrenotazione;
