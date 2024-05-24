@@ -12,9 +12,8 @@ public record DispositiviRequest(
         @NotNull(message = "Tipo è obblogatorio")
         TipoDispositivo tipo,
         @NotNull(message = "stato del dispositivo è obbligatorio")
-        StatoDispositivo stato,
-        @NotNull(message = "il dipendente deve esserci")
-        Dipendenti dipendente) {
+        StatoDispositivo stato
+        ) {
 
 
 

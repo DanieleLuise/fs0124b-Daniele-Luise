@@ -21,4 +21,9 @@ public class Dispositivi extends BaseEntity {
     private Dipendenti dipendenti;
     private TipoDispositivo tipoDispositivo;
     private StatoDispositivo statoDispositivo;
+
+    public Dispositivi(TipoDispositivo tipoDispositivo, StatoDispositivo statoDispositivo) {
+        this.tipoDispositivo = tipoDispositivo;
+        this.statoDispositivo = statoDispositivo;
+    }
 }

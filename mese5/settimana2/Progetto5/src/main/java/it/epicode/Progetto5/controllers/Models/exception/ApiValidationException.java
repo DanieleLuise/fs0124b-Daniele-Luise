@@ -1,4 +1,4 @@
-package it.epicode.Progetto5.controllers;
+package it.epicode.Progetto5.controllers.Models.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.ObjectError;

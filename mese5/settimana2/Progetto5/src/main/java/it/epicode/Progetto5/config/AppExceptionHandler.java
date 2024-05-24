@@ -1,6 +1,7 @@
 package it.epicode.Progetto5.config;
 
-import it.epicode.Progetto5.controllers.ApiValidationException;
+
+import it.epicode.Progetto5.controllers.Models.exception.ApiValidationException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
